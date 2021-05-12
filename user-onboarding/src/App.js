@@ -31,11 +31,14 @@ const [errors, setErrors] = useState(initialFormErrors)
 const [disabled, setDisabled] = useState(initialDisabled)
 const [user, setUser] = useState(initialUser)
 
-const [ID, setID] = useState(7)
+const [ID, setID] = useState(0)
 
 const getUsers = () => {
   axios.get("https://reqres.in/api/users")
-  .then(({data}) => setUser(data.data))
+  .then(({data}) => {
+    setUser(data.data)
+    setID(data.data.length + 1)
+  })
   .catch(err => console.log('Error getting users:', err))
 
   console.log(user)
