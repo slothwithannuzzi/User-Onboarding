@@ -77,6 +77,7 @@ const formSubmit = () => {
   console.log(newUser)
   console.log(user)
   setValues(initialFormValues)
+  setID(ID + 1)
 }
 
 useEffect(() => {
