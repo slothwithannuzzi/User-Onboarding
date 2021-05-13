@@ -66,7 +66,7 @@ export default function UserForm(props) {
              <div>{error.service}</div>
         </div>
 
-            <button disabled={disabled}>Sign Up</button>
+            <button id = 'sign-up' disabled={disabled}>Sign Up</button>
     
         </form>
         </div>
